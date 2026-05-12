@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Krnetic – Über mich</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .hero-card {
+            text-align: center;
+            padding: 1.75rem 1.5rem 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .profile-block {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background-color: #8899aa;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .avatar svg { width: 44px; height: 44px; opacity: 0.55; }
+        .profile-info h2 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-white);
+            margin-bottom: 2px;
+        }
+        .profile-info .job-title {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .profile-info .meta {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .about-card {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-card p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.75;
+        }
+        .about-card p + p {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">DAVID</a>
+    <button class="nav-toggle" aria-label="Menü" onclick="toggleNav(this)">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="faehigkeiten.html">Fähigkeiten</a></li>
+        <li><a href="projekte.html">Projekte</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div class="card hero-card">
+        <p>Willkommen, hier können Sie mich besser kennenlernen!</p>
+    </div>
+
+    <div class="card profile-block">
+        <div class="avatar">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="8" r="4" fill="#ccc"/>
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill="#ccc"/>
+            </svg>
+        </div>
+        <div class="profile-info">
+            <h2>David Krnetic</h2>
+            <p class="job-title">Informatiker EFZ</p>
+            <p class="meta">
+                Geboren: 5.5.2009<br>
+                Firma: Libs (Partnerfirma Varioprint AG)<br>
+                Nation: CH
+            </p>
+        </div>
+    </div>
+
+    <div class="card about-card">
+        <p class="section-title">Über mich:</p>
+        <p>
+            Ich bin ein aufstrebender Informatiker, der seine Lehre als Applikationsentwickler absolviert.
+            Meine Begeisterung für Technologie begann schon früh, als ich meine ersten kleinen Programme schrieb.
+        </p>
+        <p>
+            Aktuell konzentriere ich mich auf Frontend-Entwicklung mit HTML, CSS und JavaScript sowie
+            Backend-Entwicklung mit Java. In meiner Freizeit arbeite ich an eigenen Projekten und lerne ständig Neues.
+        </p>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 David Krnetic. Alle Rechte vorbehalten.
+</footer>
+
+<script>
+    function toggleNav(btn) {
+        btn.classList.toggle('open');
+        document.querySelector('.nav-links').classList.toggle('open');
+    }
+</script>
+</body>
+</html>

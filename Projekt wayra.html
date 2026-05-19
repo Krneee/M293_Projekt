@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Krnetic - Wayra</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            transition: color var(--transition);
+        }
+        .back-link:hover { color: var(--gold); }
+
+        .project-hero {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #1a6b8a 0%, #2eb8c2 100%);
+        }
+        .project-hero video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-header {
+            margin-bottom: 1.5rem;
+        }
+        .project-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 0.5rem;
+        }
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .detail-card {
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .detail-card p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+        .meta-item {
+            padding: 1rem 1.25rem;
+        }
+        .meta-item .label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.3rem;
+        }
+        .meta-item .value {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-white);
+        }
+
+        @media (max-width: 480px) {
+            .meta-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">DAVID</a>
+    <button class="nav-toggle" aria-label="Menü" onclick="toggleNav(this)">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Faehigkeiten.html">Fähigkeiten</a></li>
+        <li><a href="Projekte.html" class="active">Projekte</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+    <a href="Projekte.html" class="back-link">← Zurück zu Projekten</a>
+
+    <div class="project-hero">
+        <video autoplay muted loop playsinline>
+            <source src="Assets/Wayra/Preview.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="project-header">
+        <h1>Wayra – ReisePlaner</h1>
+        <div class="tag-row">
+            <span class="tag">App</span>
+            <span class="tag">React</span>
+            <span class="tag">Reiseplanung</span>
+        </div>
+    </div>
+
+    <div class="meta-grid">
+        <div class="card meta-item">
+            <p class="label">Typ</p>
+            <p class="value">Reiseplaner-App</p>
+        </div>
+        <div class="card meta-item">
+            <p class="label">Jahr</p>
+            <p class="value">2026</p>
+        </div>
+        <div class="card meta-item">
+            <p class="label">Frontend</p>
+            <p class="value">React-Native</p>
+        </div>
+        <div class="card meta-item">
+            <p class="label">Plattform</p>
+            <p class="value">Handy-App</p>
+        </div>
+    </div>
+
+    <div class="card detail-card">
+        <p class="section-title">Beschreibung:</p>
+        <p>
+            Wayra ist eine moderne mobile Reise-App, die mit React Native entwickelt wurde und Nutzerinnen und Nutzern eine interaktive Möglichkeit bietet, die Welt auf neue Weise zu entdecken. Die Anwendung verbindet übersichtliche Länderkataloge mit einer persönlichen Reiseplanung und schafft dadurch eine zentrale Plattform für Inspiration, Organisation und Entdeckung.
+            Dank der Integration von Live-Daten aus öffentlichen APIs stellt Wayra aktuelle und relevante Informationen zu verschiedenen Reisezielen bereit. Nutzerinnen und Nutzer können Städte vergleichen, neue Destinationen erkunden und geplante Reisen einfach verwalten. Die intuitive Benutzeroberfläche sorgt dabei für eine angenehme und unkomplizierte Nutzung.
+            Im Mittelpunkt steht nicht nur die Reiseplanung, sondern vor allem die Inspiration für neue Abenteuer und unvergessliche Erlebnisse. Wayra richtet sich an alle Reisebegeisterten, die ihre Reisen bewusster, informativer und übersichtlicher gestalten möchten. Damit wird die App zu einem digitalen Begleiter – von der ersten Idee bis zur konkreten Planung der nächsten Reise.
+        </p>
+    </div>
+
+    <div class="card detail-card">
+        <p class="section-title">Meine Aufgaben:</p>
+        <p>
+            Ich entwickelte die teils spezifischen API's für die Anwendung. Ebenfalls war ich zuständig für ca. die Hälfte der
+            Implementierung der Funktionalitäten. Schwerpunkt lag auf einer intuitiven Nutzererfahrung
+            und einer klaren Strukturierung der Reisedaten.
+        </p>
+    </div>
+
+    <div class="card detail-card">
+        <p class="section-title">Was ich gelernt habe:</p>
+        <p>
+            Bei diesem Projekt vertiefte ich meine Kenntnisse in der App-Entwicklung und im
+            UX-Design. Ich lernte, komplexe Datenstrukturen für Reisepläne sinnvoll zu modellieren
+            und benutzerfreundlich darzustellen. Ebenfalls lernte ich viel über die Zusammenarbeit verschiedener API's mit der Anwendung, um kombiniert eine Seite zu erstellen
+        </p>
+    </div>
+
+    <div class="link">
+        <a href="Projekte.html" class="btn">← Alle Projekte</a>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 David Krnetic. Alle Rechte vorbehalten.
+</footer>
+
+<script>
+    function toggleNav(btn) {
+        btn.classList.toggle('open');
+        document.querySelector('.nav-links').classList.toggle('open');
+    }
+</script>
+</body>
+</html>

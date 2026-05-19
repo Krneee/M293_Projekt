@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Krnetic - YuGiOh Kartenbrowser</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            transition: color var(--transition);
+        }
+        .back-link:hover { color: var(--gold); }
+
+        .project-hero {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #7b1c1c 0%, #c9a962 100%);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .project-hero img {
+            width: 72px;
+            height: 72px;
+            filter: brightness(0) invert(1) opacity(0.85);
+        }
+
+        .project-header {
+            margin-bottom: 1.5rem;
+        }
+        .project-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 0.5rem;
+        }
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .detail-card {
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .detail-card p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+        .meta-item {
+            padding: 1rem 1.25rem;
+        }
+        .meta-item .label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.3rem;
+        }
+        .meta-item .value {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-white);
+        }
+        .link-row {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 480px) {
+            .meta-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">DAVID</a>
+    <button class="nav-toggle" aria-label="Menü" onclick="toggleNav(this)">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Faehigkeiten.html">Fähigkeiten</a></li>
+        <li><a href="Projekte.html" class="active">Projekte</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+    <a href="Projekte.html" class="back-link">← Zurück zu Projekten</a>
+
+    <div class="project-hero">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="YuGiOh Kartenbrowser" />
+    </div>
+
+    <div class="project-header">
+        <h1>YuGiOh Kartenbrowser</h1>
+        <div class="tag-row">
+            <span class="tag">React</span>
+            <span class="tag">API</span>
+            <span class="tag">JavaScript</span>
+        </div>
+    </div>
+
+    <div class="meta-grid">
+        <div class="card meta-item">
+            <p class="label">Typ</p>
+            <p class="value">React-Webapplikation</p>
+        </div>
+        <div class="card meta-item">
+            <p class="label">Jahr</p>
+            <p class="value">2025</p>
+        </div>
+        <div class="card meta-item">
+            <p class="label">Framework</p>
+            <p class="value">React</p>
+        </div>
+        <div class="card meta-item">
+            <p class="label">Daten</p>
+            <p class="value">YGOPRODeck API</p>
+        </div>
+    </div>
+
+    <div class="card detail-card">
+        <p class="section-title">Beschreibung:</p>
+        <p>
+            Der YuGiOh Kartenbrowser ist eine React-Webapplikation, die es Nutzern ermöglicht,
+            die gesamte YuGiOh-Kartendatenbank zu durchsuchen und zu filtern. Karten können nach
+            Name, Typ, Attribut und weiteren Kriterien gefiltert werden. Detailansichten zeigen
+            alle relevanten Informationen zu jeder Karte.
+        </p>
+    </div>
+
+    <div class="card detail-card">
+        <p class="section-title">Meine Aufgaben:</p>
+        <p>
+            Ich integrierte die öffentliche YGOPRODeck-API und baute die gesamte Benutzeroberfläche
+            in React auf. Dabei implementierte ich Suchfunktionen, Filterlogik und eine responsive
+            Kartenanzeige mit Paginierung.
+        </p>
+    </div>
+
+    <div class="card detail-card">
+        <p class="section-title">Was ich gelernt habe:</p>
+        <p>
+            Dieses Projekt festigte meine Kenntnisse in React und im Umgang mit externen APIs.
+            Ich lernte, Daten effizient zu laden, zu verarbeiten und benutzerfreundlich darzustellen.
+            Besonders interessant war die Implementierung von Filterkomponenten und State-Management.
+        </p>
+    </div>
+
+    <div class="link">
+        <a href="Projekte.html" class="btn">← Alle Projekte</a>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 David Krnetic. Alle Rechte vorbehalten.
+</footer>
+
+<script>
+    function toggleNav(btn) {
+        btn.classList.toggle('open');
+        document.querySelector('.nav-links').classList.toggle('open');
+    }
+</script>
+</body>
+</html>

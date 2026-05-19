@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Krnetic - Endless TicTacToe</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            transition: color var(--transition);
+        }
+        .back-link:hover { color: var(--gold); }
+
+        .project-hero {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #2b5b3a 0%, #3d8b5c 100%);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .project-hero img {
+            width: 72px;
+            height: 72px;
+            filter: brightness(0) invert(1) opacity(0.85);
+        }
+
+        .project-header {
+            margin-bottom: 1.5rem;
+        }
+        .project-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 0.5rem;
+        }
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .detail-card {
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .detail-card p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+        .meta-item {
+            padding: 1rem 1.25rem;
+        }
+        .meta-item .label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.3rem;
+        }
+        .meta-item .value {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-white);
+        }
+
+        @media (max-width: 480px) {
+            .meta-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">DAVID</a>
+    <button class="nav-toggle" aria-label="Menü" onclick="toggleNav(this)">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Faehigkeiten.html">Fähigkeiten</a></li>
+        <li><a href="Projekte.html" class="active">Projekte</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+    <a href="Projekte.html" class="back-link">← Zurück zu Projekten</a>
+
+    <div class="project-hero">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="TicTacToe" />
+    </div>
+
+    <div class="project-header">
+        <h1>Endless TicTacToe</h1>
+        <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">Spiel</span>
+            <span class="tag">CLI</span>
+        </div>
+    </div>
+
+    <div class="meta-grid">
+        <div class="card meta-item">
+            <p class="label">Typ</p>
+            <p class="value">Konsolenspiel</p>
+        </div>
+        <div class="card meta-item">
+            <p class="label">Jahr</p>
+            <p class="value">2025</p>
+        </div>
+        <div class="card meta-item">
+            <p class="label">Sprache</p>
+            <p class="value">Python</p>
+        </div>
+        <div class="card meta-item">
+            <p class="label">Plattform</p>
+            <p class="value">PyGame</p>
+        </div>
+    </div>
+
+    <div class="card detail-card">
+        <p class="section-title">Beschreibung:</p>
+        <p>
+            Endless TicTacToe ist mein erstes Programmierprojekt. Es war ein TicTacToe mit
+            einer Endlos-Variante: Das älteste Symbol des jeweiligen Spielers wird ersetzt, sobald das Spiel
+            mehr als drei Züge braucht, um beendet zu werden, sodass das Spiel theoretisch
+            unendlich lang gespielt werden kann. Der User tritt gegen einen von den vorprogrammierten Schwierigkeitsgraden
+            an und versuchen, das Spiel zu gewinnen.
+        </p>
+    </div>
+
+    <div class="card detail-card">
+        <p class="section-title">Meine Aufgaben:</p>
+        <p>
+            Ich entwarf und implementierte die gesamte Spiellogik in Python, inklusive der dynamischen
+            Weiterführung des Spiels, nachdem beide ihre 3 Symbole gesetzt haben, der Gewinnbedingungsprüfung und der Ausgabe.
+        </p>
+    </div>
+
+    <div class="card detail-card">
+        <p class="section-title">Was ich gelernt habe:</p>
+        <p>
+            Dieses Projekt vertiefte mein Verständnis von Datenstrukturen und Programmierbasics in Python.
+            Besonders die Implementierung der dynamischen Gewinnbedingungsprüfung war eine interessante Herausforderung.
+        </p>
+    </div>
+
+    <div class="link">
+        <a href="Projekte.html" class="btn">← Alle Projekte</a>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 David Krnetic. Alle Rechte vorbehalten.
+</footer>
+
+<script>
+    function toggleNav(btn) {
+        btn.classList.toggle('open');
+        document.querySelector('.nav-links').classList.toggle('open');
+    }
+</script>
+</body>
+</html>

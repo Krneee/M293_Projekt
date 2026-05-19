@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Krnetic - Projekte</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            text-decoration: none;
+            display: block;
+            transition: border-color var(--transition), transform var(--transition);
+        }
+        .project-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .project-thumb {
+            width: 100%;
+            height: 140px;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-thumb .thumb-icon {
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        .project-thumb .thumb-icon-fa {
+            font-size: 2.8rem;
+            color: rgba(255,255,255,0.85);
+        }
+        .project-thumb .details-btn {
+            position: absolute;
+            bottom: 8px;
+            right: 10px;
+            background: rgba(15,23,42,0.7);
+            color: #fff;
+            font-size: 0.72rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .project-footer {
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        /* individual thumb colours */
+        .thumb-reservetable { background: linear-gradient(135deg, #c9a962 0%, #a07c35 100%); }
+        .thumb-yugioh       { background: linear-gradient(135deg, #7b1c1c 0%, #c9a962 100%); }
+        .thumb-schach       { background: linear-gradient(135deg, #1a2744 0%, #2e4070 100%); border-top: 1px solid var(--border); }
+        .thumb-wayra        { background: linear-gradient(135deg, #1a6b8a 0%, #2eb8c2 100%); }
+        .thumb-quawasser    { background: linear-gradient(135deg, #0e3d6e 0%, #1a82c4 100%); }
+        .thumb-tictactoe    { background: linear-gradient(135deg, #2b5b3a 0%, #3d8b5c 100%); }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">DAVID</a>
+    <button class="nav-toggle" aria-label="Menü" onclick="toggleNav(this)">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Faehigkeiten.html">Fähigkeiten</a></li>
+        <li><a href="Projekte.html" class="active">Projekte</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+    <p class="section-title" style="margin-bottom:1.5rem;">Projekte:</p>
+
+    <div class="project-list">
+
+        <a href="Projekt reservetable.html" class="project-card">
+            <div class="project-thumb thumb-reservetable">
+                <i class="fa-solid fa-utensils thumb-icon-fa"></i>
+                <span class="details-btn">Details</span>
+            </div>
+            <div class="project-footer">Fullstack-Projekt - ReserveTable</div>
+        </a>
+
+        <a href="Projekt yugioh.html" class="project-card">
+            <div class="project-thumb thumb-yugioh">
+                <i class="fa-solid fa-layer-group thumb-icon-fa"></i>
+                <span class="details-btn">Details</span>
+            </div>
+            <div class="project-footer">React-Projekt - YuGiOh Kartenbrowser</div>
+        </a>
+
+        <a href="Projekt schach.html" class="project-card">
+            <div class="project-thumb thumb-schach">
+                <i class="fa-solid fa-chess-knight thumb-icon-fa"></i>
+                <span class="details-btn">Details</span>
+            </div>
+            <div class="project-footer">Java-Projekt - Schach</div>
+        </a>
+
+        <a href="Projekt wayra.html" class="project-card">
+            <div class="project-thumb thumb-wayra">
+                <i class="fa-solid fa-plane-departure thumb-icon-fa"></i>
+                <span class="details-btn">Details</span>
+            </div>
+            <div class="project-footer">App-Projekt - Wayra ReisePlaner</div>
+        </a>
+
+        <a href="Projekt quawasser.html" class="project-card">
+            <div class="project-thumb thumb-quawasser">
+                <i class="fa-solid fa-droplet thumb-icon-fa"></i>
+                <span class="details-btn">Details</span>
+            </div>
+            <div class="project-footer">Webseite - Qua Wasser</div>
+        </a>
+
+        <a href="Projekt tictactoe.html" class="project-card">
+            <div class="project-thumb thumb-tictactoe">
+                <i class="fa-solid fa-hashtag thumb-icon-fa"></i>
+                <span class="details-btn">Details</span>
+            </div>
+            <div class="project-footer">Python-Projekt - Endless TicTacToe</div>
+        </a>
+
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 David Krnetic. Alle Rechte vorbehalten.
+</footer>
+
+<script>
+    function toggleNav(btn) {
+        btn.classList.toggle('open');
+        document.querySelector('.nav-links').classList.toggle('open');
+    }
+</script>
+</body>
+</html>

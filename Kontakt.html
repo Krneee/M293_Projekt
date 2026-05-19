@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Krnetic - Kontakt</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .contact-info {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+        }
+        .contact-info h2 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-white);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .contact-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-align: center;
+            line-height: 2;
+        }
+        .contact-info a {
+            color: var(--gold);
+        }
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            transition: border-color var(--transition), color var(--transition);
+            cursor: pointer;
+        }
+        .social-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .contact-form {
+            padding: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 0.9rem;
+        }
+        .form-control {
+            width: 100%;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-light);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.875rem;
+            padding: 0.7rem 1rem;
+            outline: none;
+            transition: border-color var(--transition);
+            resize: vertical;
+        }
+        .form-control::placeholder {
+            color: var(--text-muted);
+        }
+        .form-control:focus {
+            border-color: var(--gold);
+        }
+        textarea.form-control {
+            min-height: 100px;
+        }
+        .submit-row {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">DAVID</a>
+    <button class="nav-toggle" aria-label="Menü" onclick="toggleNav(this)">
+        <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faehigkeiten.html">Fähigkeiten</a></li>
+        <li><a href="projekte.html">Projekte</a></li>
+        <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div class="card contact-info">
+        <h2>Kontakt:</h2>
+        <p>
+            Email: <a href="mailto:David.Krnetic@gmx.ch">David.Krnetic@gmx.ch</a><br>
+            Telefon: <a href="tel:+41765878190">+41 76 587 81 90</a><br>
+            Standort: Staad SG, Schweiz
+        </p>
+        <div class="social-row">
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+            <a href="https://github.com" target="_blank" class="social-btn" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="card contact-form">
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="Name" />
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="email" placeholder="E-Mail" />
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="Betreff" />
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" placeholder="Nachricht"></textarea>
+        </div>
+        <div class="submit-row">
+            <button class="btn btn-gold">Senden</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 David Krnetic. Alle Rechte vorbehalten.
+</footer>
+
+<script>
+    function toggleNav(btn) {
+        btn.classList.toggle('open');
+        document.querySelector('.nav-links').classList.toggle('open');
+    }
+</script>
+</body>
+</html>
